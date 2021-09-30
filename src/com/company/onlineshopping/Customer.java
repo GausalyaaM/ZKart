@@ -14,7 +14,7 @@ public class Customer {
         this.emailId = emailId;
     }
 
-    public String getEncryptedPwd(String s) {
+    public String getEncryptedPwd() {
         return encryptedPwd;
     }
 
@@ -22,7 +22,7 @@ public class Customer {
         this.encryptedPwd = encryptedPwd;
     }
 
-    public String getName(String s) {
+    public String getName() {
         return name;
     }
 
@@ -30,7 +30,7 @@ public class Customer {
         this.name = name;
     }
 
-    public String getMobileNo(String s) {
+    public String getMobileNo() {
         return mobileNo;
     }
 
@@ -38,6 +38,6 @@ public class Customer {
         this.mobileNo = mobileNo;
     }
     public String toString(){
-        return this.emailId+" "+this.encryptedPwd+" "+this.name+" "+this.mobileNo;
+        return this.emailId+"      "+this.encryptedPwd+"      "+this.name+"      "+this.mobileNo;
     }
 }

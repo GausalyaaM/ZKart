@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class CreateObj {
+    static HashMap<String,Customer> map=new HashMap<>();
+    static HashMap<String, ArrayList<Product>> map1 = new HashMap<>();
     public static void getCustomerObj(){
-        HashMap<String,Customer> map=new HashMap<>();
-
         for(int i=0;i<Main.customerList.size();i++){
             int j=0;
             Customer details=new Customer();
@@ -18,11 +18,9 @@ public class CreateObj {
             map.put(details.getEmailId(),details);
             System.out.println(details);
         }
-        System.out.println(map);
+        //System.out.println(map);
     }
     public static void getProductObj() {
-        HashMap<String, ArrayList<Product>> map1 = new HashMap<>();
-
         for (int i = 0; i < Main.productList.size(); i++) {
             int j = 0;
             ArrayList<Product> list = new ArrayList<>();
@@ -38,7 +36,7 @@ public class CreateObj {
             //map.put(details1.getEmailId(),details);
             //System.out.println(details);
             list.add(details1);
-            System.out.println(list);
+            //System.out.println(list);
             if (map1.get(category) == null) {
                 map1.put(category, list);
             } else {
