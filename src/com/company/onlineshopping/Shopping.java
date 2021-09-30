@@ -3,6 +3,7 @@ import java.util.*;
 
 public class Shopping{
     static Map<String,ArrayList<OrderHistory>> historyMap=new HashMap<>();
+    static List<Product> proList=new ArrayList<>();
     static int number=15000;
     static int amount=0;
     public static void shopProduct(String email){
@@ -42,6 +43,7 @@ public class Shopping{
                     history.setModel(model);
                     history.setPrice(pro.getPrice());
                     Main.kart.add(history);
+                    proList.add(pro);
                     System.out.println("Do you want to continue to purchase or add any item or cancel the process");
                     System.out.println("Enter 1 to continue:");
                     System.out.println("Enter 2 to add any item:");
@@ -67,5 +69,6 @@ public class Shopping{
             }
             //System.out.println(Main.kart);
         }
+        Main.kart=new ArrayList<>();
     }
 }

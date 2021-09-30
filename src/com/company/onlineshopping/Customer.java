@@ -38,6 +38,6 @@ public class Customer {
         this.mobileNo = mobileNo;
     }
     public String toString(){
-        return this.emailId+"      "+this.encryptedPwd+"      "+this.name+"      "+this.mobileNo;
+        return this.encryptedPwd+"      "+this.name+"      "+this.mobileNo;
     }
 }

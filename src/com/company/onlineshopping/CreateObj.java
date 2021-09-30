@@ -16,9 +16,9 @@ public class CreateObj {
             details.setName(arr[j++]);
             details.setMobileNo(arr[j++]);
             map.put(details.getEmailId(),details);
-            System.out.println(details);
+           // System.out.println(details);
         }
-        //System.out.println(map);
+        System.out.println(map);
     }
     public static void getProductObj() {
         for (int i = 0; i < Main.productList.size(); i++) {
