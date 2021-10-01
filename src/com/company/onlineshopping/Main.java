@@ -12,6 +12,7 @@ public class Main {
     public static void main(String[] args) {
         CreateObj.getCustomerObj();
         CreateObj.getProductObj();
+        String coupon=GenerateDiscount.generateCouponCode();
         while (true) {
             Scanner scan = new Scanner(System.in);
             System.out.println("---------Z-kart online shopping--------");
@@ -82,20 +83,24 @@ public class Main {
                                     System.out.println("Logged in successfully!!");
                                 } else {
                                     System.out.println("Account not exist....please create the account...");
+                                    return;
                                 }
-                                Shopping.shopProduct(emailId);
+
                                 //System.out.println("Enter 1 to check order history or enter 2 to exit:");
                                 System.out.println("1.Shopping");
-                                System.out.println("2.Order history");
-                                System.out.println("3.Exit");
+                                //System.out.println("2.Order history");
+                                System.out.println("2.Exit");
                                 int option = scan.nextInt();
                                 if (option == 1) {
+                                    Shopping.shopProduct(emailId);
                                     PrintOrderHistory.printHistory(emailId);
+                                    return;
                                 } else if (option == 2) {
                                     return;
-                                } else {
-                                    System.out.println("Ivalid option!!");
                                 }
+                                //else {
+                                  //  System.out.println("Ivalid option!!");
+                                //}
                             case 2:
                                 scan.nextLine();
                                 //String adminEmail = "admin@zoho.com";

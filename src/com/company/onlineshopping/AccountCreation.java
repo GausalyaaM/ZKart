@@ -14,7 +14,7 @@ public class AccountCreation {
             CreateObj.map.put(email,details);
             try(FileWriter writer=new FileWriter("/home/inc7/IdeaProjects/ZKart/src/com/company/onlineshopping/zusers_db",true)){
                 writer.write("\n");
-                writer.write(email);
+                //writer.write(email);
                 writer.write(String.valueOf(details));
             }
             catch(IOException e){

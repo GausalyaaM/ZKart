@@ -52,7 +52,10 @@ public class Shopping{
                     if(choice==1){
                         System.out.println("Your order is placed!");
                         historyMap.put(email,(ArrayList<OrderHistory>) Main.kart);
-                        //return;
+                        history.setTotalCost(amount);
+                        System.out.println(history.getTotalCost());
+                        Main.kart=new ArrayList<>();
+                        amount=0;
                     }
                     else if(choice==2){
                         shopProduct(email);
@@ -64,11 +67,10 @@ public class Shopping{
                 else {
                     System.out.println("Product stock is not enough!!");
                 }
-                history.setTotalCost(amount);
-                System.out.println(history.getTotalCost());
+
             }
             //System.out.println(Main.kart);
         }
-        Main.kart=new ArrayList<>();
+
     }
 }
